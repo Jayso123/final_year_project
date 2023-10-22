@@ -1,99 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <script
-      src="https://kit.fontawesome.com/a13b999530.js"
-      crossorigin="anonymous"
-    ></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ScholarZone</title>
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="aws.css">
+  <script src="https://kit.fontawesome.com/a13b999530.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScholarZone</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="aws.css">
+  <link rel="stylesheet" href="Demo.css">
 </head>
+
 <body>
-    <header>
-        <a class="logo" href="#">
-          <img class="logo" src="./LOGO.png" alt="InternShala">
+  <header>
+    <a class="logo" href="#">
+      <img class="logo" src="./LOGO.png" alt="InternShala">
+    </a>
+    <nav>
+      <ul class="nav_links">
+        <li>
+          <a href="/About_us.html">About Us</a>
+        </li>
+        <li>
+          <a href="#">Organzaions</a>
+        </li>
+        <li>
+          <a href="#">Scholarship</a>
+        </li>
+      </ul>
+    </nav>
+    <a href="/final/sign_in.html" id="cta">
+      <button class="headingbutton">Login</button></a>
+
+    <a href="/final/signup.html" id="cta1">
+      <button class="headingbutton" id="register">Register</button></a>
+  </header>
+  <div id="searchbox">
+    <input id="home_search" type="text" placeholder="What are you looking for?" autocomplete="off">
+    <button id="searchIcon">
+      <i class="fa fa-search"></i>
+    </button>
+  </div>
+  <div id="internships" class="container-fluid section">
+    <div class="max-width-container">
+      <h2>Scholarship</h2>
+      <p class="section_description">
+        Apply to Scholarship for free
+        <a class="view_all_cta" href="#">
+          View all Scholarship <i class="ic-24-arrow-right"></i>
         </a>
-        <nav>
-          <ul class="nav_links">
-            <li>
-              <a href="#">Organzaions</a>
-            </li>
-            <li>
-          
-            </li>
-            <li>
-              <a href="#">Scholarship</a>
-            </li>
-          </ul>
-        </nav>
-        <a href="/final/index.html" id="cta">
-          <button class="headingbutton">Login</button></a>
-  
-        <a href="/" id="cta1">
-          <button class="headingbutton" id="register">Register</button></a>
-      </header>
-      <div id="searchbox">
-        <input id="home_search" type="text" placeholder="What are you looking for?" autocomplete="off">
-        <button id="searchIcon">
-            <i class="fa fa-search" ></i>
-        </button>
-      </div>
-      <div id="internships" class="container-fluid section">
-        <div class="max-width-container">
-          <h2>Scholarship</h2>
-          <p class="section_description">
-            Apply to Scholarship for free
-            <a class="view_all_cta" href="#">
-              View all Scholarship  <i class="ic-24-arrow-right"></i>
-            </a>
-          </p>
-         
-          <div class="categories_container">
-            <h4>Popular College/University of Cities</h4>
-           
-            <div class="categories scrollable_cards">
-             
-              <a class="internship_card card_item home_tile_city" href="#">
-                <div class="img">
-                  <img alt="" src="https://internshala.com/static/images/home/internships/categories/delhi_ncr.svg">
-                </div>
-                <div class="text">Delhi</div>
-              </a>
-              <a class="internship_card card_item home_tile_city" href="#">
-                <div class="img">
-                  <img alt="" src="https://internshala.com/static/images/home/internships/categories/bangalore.svg">
-                </div>
-                <div class="text">Bangalore</div>
-              </a>
-              <a class="internship_card card_item home_tile_city" href="#">
-                <div class="img">
-                  <img alt="" src="https://internshala.com/static/images/home/internships/categories/mumbai.svg">
-                </div>
-                <div class="text">Mumbai</div>
-              </a>
-              <a class="internship_card card_item home_tile_city" href="#">
-                <div class="img">
-                  <img alt="" src="https://internshala.com/static/images/home/internships/categories/hyderabad.svg">
-                </div>
-                <div class="text">Hyderabad</div>
-              </a>
-              <a class="internship_card card_item home_tile_city" href="#">
-                <div class="img">
-                  <img alt="" src="https://internshala.com/static/images/home/internships/categories/chennai.svg">
-                </div>
-                <div class="text">Vadodara</div>
-              </a>
-              <a class="internship_card card_item home_tile_city" href="#">
-                <div class="img">
-                  <img alt="" src="https://internshala.com/static/images/home/internships/categories/kolkata.svg">
-                </div>
-                <div class="text">Kolkata</div>
-              </a>
+      </p>
+
+      <div class="categories_container">
+        <h4>Popular College/University of Cities</h4>
+
+        <div class="categories scrollable_cards">
+
+          <a class="internship_card card_item home_tile_city" href="#">
+            <div class="img">
+              <img class="city" alt="" src="/final/html/Images/gateway.png">
             </div>
-          </div>
-         
+            <div class="text">Delhi</div>
+          </a>
+          <a class="internship_card card_item home_tile_city" href="#">
+            <div class="img">
+              <img class="city" alt="" src="final/html/Images/lotus-temple.png">
+            </div>
+            <div class="text">Bangalore</div>
+          </a>
+          <a class="internship_card card_item home_tile_city" href="#">
+            <div class="img">
+              <img class="city" alt="" src="final/html/Images/gateway.png">
+            </div>
+            <div class="text">Mumbai</div>
+          </a>
+          <a class="internship_card card_item home_tile_city" href="#">
+            <div class="img">
+              <img class="city" alt="" src="final/html/Images/konark-sun-temple.png">
+            </div>
+            <div class="text">Odisha</div>
+          </a>
+          <a class="internship_card card_item home_tile_city" href="#">
+            <div class="img">
+              <img class="city" alt="" src="final/html/Images/temple (1).png">
+            </div>
+            <div class="text">Vadodara</div>
+          </a>
+          <a class="internship_card card_item home_tile_city" href="#">
+            <div class="img">
+              <img class="city" alt="" src="final/html/Images/kolkata.png">
+            </div>
+            <div class="text">Kolkata</div>
+          </a>
+          <a class="internship_card card_item home_tile_city" href="#">
+            <div class="img">
+              <img class="city" alt="" src="final/html/Images/sri-ranganathasvamy.png">
+            </div>
+            <div class="text">Karnataka</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box1">
+        <h1 class="details">Demo Scholarship</h1>
+        <h2 class="scholar"> Scholarships Shown Here Scholarships Shown Here Scholarships Shown Here Scholarships Shown
+          Here Scholarships Shown Here Scholarships Shown Here Scholarships Shown HereScholarships Shown Here</h2>
+        <a class="more" href="Sch_Details.html">Read more &#8594;</a>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box1">
+        <h1 class="details">Demo Scholarship</h1>
+        <h2 class="scholar"> Scholarships Shown Here Scholarships Shown Here Scholarships Shown Here Scholarships Shown
+          Here Scholarships Shown Here Scholarships Shown Here Scholarships Shown HereScholarships Shown Here</h2>
+        <a class="more" href="Sch_Details.html">Read more &#8594;</a>
+      </div>
+    </div>
+
+
 </body>
+
 </html>

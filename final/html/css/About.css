@@ -1,4 +1,5 @@
-
+/* <<< Style part >>> */
+/* Main div And first div Accordingly  */
 
 body {
     color: #63d49e;
@@ -25,7 +26,7 @@ body {
     margin-bottom: 16px;
 }
 
-
+/* Side Text Color And Design */
 a {
     font-weight: 500;
     text-decoration: none;
@@ -80,7 +81,7 @@ body {
     font-family: 'Inter var',sans-serif;
 }
 .scrollable_cards >.card_item >.text:hover{
-    color: #63d49e;
+    color: #008BDC;
     /* border: 1px solid black; */
 }
 .scrollable_cards .card_item:hover {
@@ -92,7 +93,7 @@ body {
     margin-right: 1px;
 }
 
-
+/* After div in left side the text */
 
 .view_all_cta_container_20_more {
     text-align: center;
@@ -126,7 +127,11 @@ body {
     line-height: 1.22;
     color: #484848;
 }
-
+/* .categories_container{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+} */
 .categories {
     /* border: 1px solid black; */
     display: flex;
@@ -218,12 +223,7 @@ div {
     justify-content:space-around;
     
 }
-.city{
-    height: 80px;
-    width: 80px;
-}
-
-#fresher_jobs #fresher_jobs_container .fresher_job_perk {
+#fresher_jobs #fresher_jobs_container .fresher_job_perk .img {
     height: 88px;
     width: 88px;
 }
