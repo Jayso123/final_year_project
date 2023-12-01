@@ -5,39 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>scholarzone</title>
     <link rel="stylesheet" href="./html/css/signup.css">
+    <script src="https://kit.fontawesome.com/114fa55fed.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="container">
     
   <h2>SCHOLARZONE</h2>
   <h2 class="head">CREATE YOUR ACCOUNT</h2>
-  <form> 
-    <input type="text" class="Name" placeholder="Your Name">
+  <form action="/myaction.php" name="myForm" onsubmit="return ValidateForm()" method="post">  
+    <input type="text" class="Name" placeholder="Your Name" name="fname" id="name" required><span class="formerror"><b></b></span>
     <br/>
-    <input type="text" class="email" placeholder="EMAIL">
+    <input type="text" class="email" placeholder="EMAIL" name="femail" id="email" autocomplete="email"
+    required><span class="formerror"><b></b></span>
     <br/>
-    <input type="password" class="pwd" placeholder="PASSWORD">
+    <input type="password" class="pwd" placeholder="PASSWORD" name="fpass" id="pass" autocomplete="current-password"
+    required><span class="formerror"><b></b></span>
     <br/>
-    <input type="password" class="pwd" placeholder="COMFIRM PASSWORD">
+    <input type="password" class="pwd" placeholder="COMFIRM PASSWORD" name="fcpass" id="cpass" autocomplete="current-password"
+    required><span class="formerror"><b></b></span>
   </form>
  
   <br/>
-  <button class="register">
+  <!-- <button class="signup">
     <span>Sign up</span>
   </button>
   <button class="signin">
     <a href="/index.html" style="text-decoration: none; color: white;">Back</a>
-  </button>
+  </button> -->
+  <input type="button" value="signup" class="signup" id="signup">
+  <a href="/index.html"><input type="button" name="back" id="back" class="back" value="Back"></a>
+
   <h3>your registration is complete !    </h3>
   <h3>your sign in is complete !</h3>
-  <div class="reg"></div>
-  <div class="sig"></div>
+  <!-- <div class="reg"></div> -->
+  <!-- <div class="sig"></div> -->
 
  
  
 </div>
 
-<script src="./js/index.js"></script>
+<script>
+  function clearErrors(){
+
+      errors = document.getElementByClassName('formerror');
+      for (let item of errors)
+      {
+        item.innerHTML = "";
+      }
+  }
+
+  function seterror(id, error){
+    // sets error inside tag of id
+    Element = document.getElementById(id);
+    Element.getElementByClassName('formerror')[0].innerHTML = error;
+  }
+
+  function ValidateForm(){
+    var returnval = true;
+
+    var name = document.forms['myForm']["fname"].value;
+    if (name.length<5){
+      alert("name", "Length of name is too short");
+      returnval = false;
+    }
+
+
+  }
+
+</script>
 </body>
 
-</html>
+</html> 
