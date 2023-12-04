@@ -16,7 +16,7 @@
     <input type="text" class="Name" placeholder="Your Name" name="fname" id="name" required><span class="formerror"><b></b></span>
     <br/>
     <input type="text" class="email" placeholder="EMAIL" name="femail" id="email" autocomplete="email"
-    required><span class="formerror"><b></b></span>
+    required><span class="formerror"></span>
     <br/>
     <input type="password" class="pwd" placeholder="PASSWORD" name="fpass" id="pass" autocomplete="current-password"
     required><span class="formerror"><b></b></span>
@@ -32,7 +32,7 @@
   <button class="signin">
     <a href="/index.html" style="text-decoration: none; color: white;">Back</a>
   </button> -->
-  <input type="button" value="signup" class="signup" id="signup">
+  <input type="submit" value="signup" class="signup" id="signup">
   <a href="/index.html"><input type="button" name="back" id="back" class="back" value="Back"></a>
 
   <h3>your registration is complete !    </h3>
@@ -44,7 +44,7 @@
  
 </div>
 
-<script>
+<!-- <script>
   function clearErrors(){
 
       errors = document.getElementByClassName('formerror');
@@ -65,14 +65,17 @@
 
     var name = document.forms['myForm']["fname"].value;
     if (name.length<5){
-      alert("name", "Length of name is too short");
+      // seterror("name", "Length of name is too short");
+      alert("name","name is too short");
       returnval = false;
     }
 
 
   }
 
-</script>
+</script> -->
+
+<script src="/final/html/js/signup.js"></script>
 </body>
 
 </html> 
