@@ -136,12 +136,12 @@
       -webkit-transition:.5s;
       transition:.5s;
     }
-    &:hover{
+    /* &:hover{
       span{
         -webkit-transform:translateX(30px);
         transform:translateX(30px);
         }
-     }
+     } */
   }
   
   .reg{

@@ -33,7 +33,7 @@
     display:block;
     margin-bottom:80px;
     width:500px;
-    height:490px;
+    height:500px;
     background:#fff;
     border-radius:5px;
     overflow:hidden;
@@ -48,6 +48,19 @@
     text-transform:uppercase;
     color: black;
   }
+
+  img{
+    position: relative;
+    left: 90px;
+    top: -15px;
+}
+
+.title{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-10px , -30px);
+}
   
   h2{
     padding: 17px 155px;
@@ -91,7 +104,7 @@
   
   .email,
   .Name,
-  .pwd{
+  .pass{
     position:relative;
     z-index:1;
     border-bottom:1px solid rgba(0,0,0,.1);
@@ -139,7 +152,7 @@
     color: #000000;
   }
   
-  .back {
+  .signin {
     display: block;
     float: left;
     width: 250px;
@@ -154,7 +167,7 @@
     background: #67d5a0;
   }
   
-  .back:hover {
+  .signin:hover {
     color: #000000;
   }
   

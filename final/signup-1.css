@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #e2e2e2;
+    background-size: 100%;
+}
+
+.container{
+    position:relative;
+    top:115px;
+    left:33%;
+    display:block;
+    margin-bottom:80px;
+    width:500px;
+    height:500px;
+    background:#fff;
+    border-radius:5px;
+    overflow:hidden;
+    z-index:1;
+    opacity: 85%;
+  }
+
+img{
+    position: relative;
+    left: 90px;
+    top: -15px;
+}
+
+.title{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-10px , -30px);
+}
+
+.details_1{
+    margin: 10px 10px;
+}
+
+
+.signup {
+    cursor: pointer;
+    display: block;
+    float: left;
+    width: 250px;
+    height: 65px;
+    margin-top: 30px;
+    border: none;
+    font-family: "Fira Sans", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    background: gray;
+  }
+  
+  .signup:hover {
+    color: #000000;
+  }
+  
+  .signin {
+    display: block;
+    float: left;
+    width: 250px;
+    height: 65px;
+    margin-top: 30px;
+    border: none;
+    font-family: "Fira Sans", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    background: #67d5a0;
+  }
+  
+  .signin:hover {
+    color: #000000;
+  }

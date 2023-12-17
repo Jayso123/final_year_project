@@ -12,30 +12,38 @@
     
   <img src="/LOGO.png" alt="LOGO">
   <form>
-    <input type="text" class="email" placeholder="EMAIL" name="email">
+    <input type="text" class="email" placeholder="UserName" name="email" id="uname">
     <br/>
-    <input type="password" class="pwd" placeholder="PASSWORD" name="pass">
+    <input type="password" class="pwd" placeholder="PASSWORD" name="pass" id="pass">
   </form>
   <a href="#" class="link">
     forgot your password ?
   </a>
   <br/>
   <button class="register">
-        <a href="signup.html" style="text-decoration: none; color: white;">register</a>
+        <a href="signup.html" style="text-decoration: none; color: white;" id="signup">register</a>
   </button>
   <button class="signin">
-    <span>sign in</span>
+    <span id="signin">sign in</span>
   </button>
-  <h3>your registration is complete !    </h3>
-  <h3>your sign in is complete !</h3>
-  <div class="reg"></div>
-  <div class="sig"></div>
 
  
  
 </div>
 <script>
-  
+    document.getElementById("signin").addEventListener("click", function(){
+      var Uname = document.getElementById("uname").value;
+      var pass = document.getElementById("pass").value;
+
+        if(Uname==="" || pass===""){
+          alert("User or passowrd can't be Empty");
+        }
+        else{
+          window.location.href = '/index.html';
+        }
+
+    });
+
 
 </script>
 </body>
