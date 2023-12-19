@@ -66,9 +66,9 @@
     &:active:focus{
       color:#ff5722;
       outline:none;
-      border-bottom:1px solid #ff5722;
+      border-bottom:1px solid #67d5a0;
       &::placeholder{
-        color:#ff5722;
+        color:#67d5a0;
         position:relative;
         -webkit-transform:translateY(-20px);
         transform:translateY(-20px);

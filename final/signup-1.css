@@ -57,9 +57,21 @@ img{
     transition: 0.5s;
     background: gray;
   }
+
+  
   
   .signup:hover {
     color: #000000;
+  }
+
+  button{
+    margin: 0;
+    position: relative;
+    top: 20px;
+    left: 100px;
+    font-size: 20px;
+    text-decoration: none;
+
   }
   
   .signin {

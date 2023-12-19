@@ -21,7 +21,7 @@
   </a>
   <br/>
   <button class="register">
-        <a href="signup.html" style="text-decoration: none; color: white;" id="signup">register</a>
+        <a href="./signup.html" style="text-decoration: none; color: white;" id="signup">register</a>
   </button>
   <button class="signin">
     <span id="signin">sign in</span>
@@ -42,6 +42,14 @@
           window.location.href = '/index.html';
         }
 
+        function ErrorHandler(){
+          if (Uname==="Uname" || Pass==="Pass"){
+            console.log("your Username or Password may not correct");
+          }
+          else{
+            console.log("You can go to main page");
+          }
+        }
     });
 
 
