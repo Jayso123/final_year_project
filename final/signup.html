@@ -12,26 +12,24 @@
     <h2 class="title">CREATE YOUR ACCOUNT</h2>
       <div class="details">
         <form  method="myaction.php" name="myForm" onsubmit="return ValidateForm()" method="post">
-          <input class="details_1" type="text" name="name" id="fname"  placeholder="pkpkpk"><span class="formerror"></span><br/>
-          <input class="details_1" type="number" name="number"  id="number" placeholder="pkpkpk"><span class="formerror"></span><br/>
-          <input class="details_1" type="email" name="email" id="email" placeholder="pkpkpk"><span class="formerror"></span><br/>
-          <input class="details_1" type="password" name="password"  id="pass" placeholder="pkpkpk"><span class="formerror"></span><br/>
-          <input class="details_1" type="password" name="password"  id="cpass" placeholder="pkpkpk"><span class="formerror"></span><br/>
-          <!-- <input type="submit" value="register" class="signup">
-          <input type="submit" value="signin" class="signin" > -->
-          <div class="signup">
-            <button>
-              <a href="./signup.html"> Signup </a>
-            </button>
-          </div>
-          <div class="signin">
-            <button>
-              <a href="./sign_in.html"> Sign in </a>
-            </button>
-          </div>
+          <input class="details_1" type="text" name="name" id="fname"  placeholder="Name"><span class="formerror"></span><br/>
+          <input class="details_1" type="tel" name="number"  id="number" placeholder="Phone No"><span class="formerror"></span><br/>
+          <input class="details_1" type="email" name="email" id="email" placeholder="Email"><span class="formerror"></span><br/>
+          <input class="details_1" type="password" name="password"  id="pass" placeholder="Password"><span class="formerror"></span><br/>
+          <input class="details_1" type="password" name="password"  id="cpass" placeholder="Confirm Password"><span class="formerror"></span><br/>
+          <!-- <button class="signup">
+            <a href="signup.html">Sign up</a>
+          </button>
+          </div> -->
+          <button class="signup" id="signup">
+            <a href="./signup.html" style="text-decoration: none; color: white; font-size: 20px;" id="signup">Sign up</a>
+          </button>
+          <button class="signin">
+            <a href="sign_in.html" style="text-decoration: none; color: white; font-size: 20px;" id="signup">Sign in</a>
+          </button>
         </form>
       </div>
   </div>
-  
+  <script src="/final/html/js/signup.js"></script>
 </body>
 </html>
