@@ -11,7 +11,7 @@
     <div class="container">
     
   <img src="/LOGO.png" alt="LOGO">
-  <form>
+  <form action="signin.php" name="my_form" method="post">
     <input type="text" class="email" placeholder="UserName" name="email" id="uname">
     <br/>
     <input type="password" class="pwd" placeholder="PASSWORD" name="pass" id="pass">
@@ -21,7 +21,9 @@
   </a>
   <br/>
   <button class="register">
-        <a href="./signup.html" style="text-decoration: none; color: white;" id="signup">register</a>
+    <span id="signup">
+      signup</span>   
+    <!-- <a href="./signup.html" style="text-decoration: none; color: white;" id="signup">register</a> -->
   </button>
   <button class="signin">
     <span id="signin">sign in</span>
@@ -52,8 +54,16 @@
         }
     });
 
+    document.getElementById("signup").addEventListener("click", ()=>{
+      var signupUrl = "./signup.html"
+      window.location.href = signupUrl
+    });
+
+
 
 </script>
 </body>
 
 </html>
+
+
