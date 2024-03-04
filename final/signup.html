@@ -1,36 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>scholarzone</title>
-  <link rel="stylesheet" href="signup-1.css">
-</head>
-<body>
-  <div class="container">
-    <img src="/LOGO.png" alt="logo">
-    <h2 class="title">CREATE YOUR ACCOUNT</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scholarzone</title>
+    <link rel="stylesheet" href="signup-1.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="/LOGO.png" alt="" />
+      <h2 class="title">CREATE YOUR ACCOUNT</h2>
       <div class="details">
-        <form action="signup.php" name="myForm" onsubmit="return ValidateForm()" method="post">
-          <input class="details_1" type="text" name="name" id="fname"  placeholder="Name"><span class="formerror"></span><br/>
-          <input class="details_1" type="tel" name="number"  id="number" placeholder="Phone No"><span class="formerror"></span><br/>
-          <input class="details_1" type="email" name="email" id="email" placeholder="Email"><span class="formerror"></span><br/>
-          <input class="details_1" type="password" name="password"  id="pass" placeholder="Password"><span class="formerror"></span><br/>
-          <input class="details_1" type="password" name="password"  id="cpass" placeholder="Confirm Password"><span class="formerror"></span><br/>
+        <form
+          action="signup"
+          name="myForm"
+          onsubmit="return ValidateForm()"
+          method="post"
+        >
+          <input
+            class="details_1"
+            type="text"
+            name="name"
+            id="fname"
+            placeholder="Name"
+          /><span class="formerror"></span><br />
+          <input
+            class="details_1"
+            type="tel"
+            name="number"
+            id="number"
+            placeholder="Phone No"
+          /><span class="formerror"></span><br />
+          <input
+            class="details_1"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+          /><span class="formerror"></span><br />
+          <input
+            class="details_1"
+            type="password"
+            name="password"
+            id="pass"
+            placeholder="Password"
+          /><span class="formerror"></span><br />
+          <input
+            class="details_1"
+            type="password"
+            name="password"
+            id="cpass"
+            placeholder="Confirm Password"
+          /><span class="formerror"></span><br />
           <!-- <button class="signup">
             <a href="signup.html">Sign up</a>
           </button>
           </div> -->
           <button class="signup" id="signup">
-            <a href="./signup.html" style="text-decoration: none; color: white; font-size: 20px;" id="signup">Sign up</a>
+            <a
+              href="./Signup.html"
+              style="text-decoration: none; color: white; font-size: 20px"
+              id="signup"
+              >Sign up</a
+            >
           </button>
           <button class="signin">
-            <a href="sign_in.html" style="text-decoration: none; color: white; font-size: 20px;" id="signup">Sign in</a>
+            <a
+              href="./sign_in.html"
+              style="text-decoration: none; color: white; font-size: 20px"
+              id="signin"
+              >Sign in</a
+            >
           </button>
         </form>
       </div>
-  </div>
-  <script src="/final/html/js/signup.js"></script>
-</body>
+    </div>
+    <script src="/final/html/js/signup.js"></script>
+  </body>
 </html>
-

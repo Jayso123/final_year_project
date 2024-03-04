@@ -1,37 +1,43 @@
-.box{
-    display: inline-block;
-    margin-left: 80px;
-    background-color: white;
-    border: 2px solid #63d49e;
-    height: 250px;
-    width: 85%;
-    border-radius: 55px;
-    margin: 20px 65px 20px;
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+.box {
+  display: flex;
+  position: relative;
+  /* justify-items: center;
+    align-items: center; */
+  margin: auto;
+  margin-top: 50px;
+  background-color: white;
+  border: 2px solid #63d49e;
+  height: 250px;
+  width: 85%;
+  border-radius: 55px;
+  /* margin: 20px 65px 20px; */
+  /* margin-left: 80px; */
 }
 
-.details{
-    color: black;
-    padding-left: 50px;
-    padding-top: 40px;  
+.details {
+  color: black;
+  padding-left: 50px;
+  padding-top: 20px;
 }
 
-.scholar{
-    color: black;
-    padding-left: 50px;
-    padding-top: 0px; 
-    font-size: 20px;
+.scholar {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(17, 17, 17);
+  padding-left: 50px;
+  padding-top: 0px;
+  padding-right: 20px;
+  font-size: 20px;
 }
 
-.more{
-    display: flex;
-    justify-content: end;
-    padding-right: 50px;
-    font-size: 25px;
-    padding-top: 0px;
+.more {
+  display: flex;
+  justify-content: end;
+  padding-right: 50px;
+  font-size: 25px;
+  padding-top: 0px;
 }
 
-
-.more:hover{
-    color: #63d49e;
+.more:hover {
+  color: #63d49e;
 }
-

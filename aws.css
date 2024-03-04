@@ -1,102 +1,133 @@
-
-
 body {
-    color: #63d49e;
-    font-family: Inter,sans-serif;
-    height: 100%;
-    font-size: 14px;
-    line-height: 1.57142857;
-    font-weight: 400;
+  color: #63d49e;
+  font-family: Inter, sans-serif;
+  height: 100%;
+  font-size: 14px;
+  line-height: 1.57142857;
+  font-weight: 400;
+
+  #searchbox {
+    position: relative;
+  }
+
+  #searchResults {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 475px;
+    z-index: 1;
+    width: calc(80% - 20px);
+    max-height: 150px;
+    max-width: 500px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  #searchResults li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  #searchResults li:hover {
+    background-color: #f2f2f2;
+  }
 }
+
 #internships .section_description {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 .max-width-container {
-    max-width: 1224px;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 1224px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .container-fluid {
-    padding-left: 16px;
-    padding-right: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 #internships .categories_container {
-    margin-top: 24px;
-    margin-bottom: 16px;
+  margin-top: 24px;
+  margin-bottom: 16px;
 }
-
 
 a {
-    font-weight: 500;
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-    line-height: 1.14285714;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  line-height: 1.14285714;
 }
 
-*, ::after, ::before {
-    box-sizing: border-box;
+*,
+::after,
+::before {
+  box-sizing: border-box;
 }
 p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 div {
-    display: block;
+  display: block;
 }
-div h4{
-    font-size: 20px;
+div h4 {
+  font-size: 20px;
 }
 body {
-    font-family: 'Inter var',sans-serif;
+  font-family: "Inter var", sans-serif;
 }
 .scrollable_cards .card_item:first-of-type {
-    margin-left: 1px;
+  margin-left: 1px;
 }
 .scrollable_cards .card_item {
-    display: flex;
-    padding: 16px 4px 24px;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 6px;
-    margin: 10px 7px;
-    width: 140px;
-    height: 156px;
+  display: flex;
+  padding: 16px 4px 24px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 6px;
+  margin: 10px 7px;
+  width: 140px;
+  height: 156px;
 }
 .scrollable_cards .card_item .text {
-    font-family: Inter,sans-serif;
-    font-weight: 600;
-    /* font-weight: bold; */
-    color: #333;
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.38;
-    margin-top: 16px;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  /* font-weight: bold; */
+  color: #333;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.38;
+  margin-top: 16px;
 }
 .scrollable_cards .card_item .text {
-    font-family: 'Inter var',sans-serif;
+  font-family: "Inter var", sans-serif;
 }
-.scrollable_cards >.card_item >.text:hover{
-    color: #63d49e;
-    /* border: 1px solid black; */
+.scrollable_cards > .card_item > .text:hover {
+  color: #63d49e;
+  /* border: 1px solid black; */
 }
 .scrollable_cards .card_item:hover {
-    box-shadow: 0.25px 0.5px 4px 2px rgb(238, 228, 228);
-    border-radius: 3px;
+  box-shadow: 0.25px 0.5px 4px 2px rgb(238, 228, 228);
+  border-radius: 3px;
 }
 
 .scrollable_cards .card_item:last-of-type {
-    margin-right: 1px;
+  margin-right: 1px;
 }
 
-
-
 .view_all_cta_container_20_more {
-    text-align: center;
-    margin-top: 24px;
+  text-align: center;
+  margin-top: 24px;
 }
 
 #trainings #trainings_container {
@@ -118,46 +149,46 @@ body {
   margin-right: 0;
 }
 .section .section_description {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 16px;
-    margin-bottom: 0;
-    font-size: 18px;
-    line-height: 1.22;
-    color: #484848;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 1.22;
+  color: #484848;
 }
 
 .categories {
-    /* border: 1px solid black; */
-    display: flex;
-    flex-direction: row;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
 }
 
 .scrollable_cards {
-    /* border: 1px solid black; */
-    display: flex;
-    flex-direction: row;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
 }
 
 /* For left side buttons click */
 
 .section .section_description .view_all_cta {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .view_all_cta {
-    font-family: 'Inter var',sans-serif;
-    padding: 0px 5px;
+  font-family: "Inter var", sans-serif;
+  padding: 0px 5px;
 }
 .view_all_cta {
-    display: flex;
-    justify-content: center;
-    min-width: 328px;
-    font-size: 16px;
-    line-height: 1.25;
-    font-family: Inter,sans-serif;
-    font-weight: 600;
+  display: flex;
+  justify-content: center;
+  min-width: 328px;
+  font-size: 16px;
+  line-height: 1.25;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
 }
 
 /* For arrow buttom In every part*/
@@ -171,8 +202,6 @@ body {
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
   vertical-align: middle;
-  
-
 }
 
 .ic-24-arrow-right:before {
@@ -188,69 +217,74 @@ body {
 /* last div */
 
 .section:last-of-type {
-    padding-bottom: 104px;
+  padding-bottom: 104px;
 }
 .section {
-    padding-top: 40px;
-    padding-bottom: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .container-fluid {
-    padding-left: 16px;
-    padding-right: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
-.container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
-*, ::after, ::before {
-    box-sizing: border-box;
+*,
+::after,
+::before {
+  box-sizing: border-box;
 }
 
 div {
-    display: block;
+  display: block;
 }
 #fresher_jobs_container {
-    /* border: 1px solid black; */
-    display: flex;
-    justify-content:space-around;
-    
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-around;
 }
-.city{
-    height: 80px;
-    width: 80px;
+.city {
+  height: 80px;
+  width: 80px;
 }
 
 #fresher_jobs #fresher_jobs_container .fresher_job_perk {
-    height: 88px;
-    width: 88px;
+  height: 88px;
+  width: 88px;
 }
 
 #fresher_jobs #fresher_jobs_container .fresher_job_perk .name {
-    font-size: 16px;
-    font-family: Inter,sans-serif;
-    font-weight: 600;
-    line-height: 1.25;
-    margin-top: 8px;
-    text-align: center;
+  font-size: 16px;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 8px;
+  text-align: center;
 }
 #fresher_jobs #fresher_jobs_container .fresher_job_perk {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 24px 64px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px 64px 32px;
 }
 #fresher_jobs .superscript {
-    background: #FF8C00;
-    border-radius: 3px;
-    color: #fff;
-    font-size: 18px;
-    font-family: Inter,sans-serif;
-    font-weight: 600;
-    padding: 4px 16px;
-    margin-left: 4px;
-    position: relative;
-    bottom: 4px;
+  background: #ff8c00;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 18px;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  padding: 4px 16px;
+  margin-left: 4px;
+  position: relative;
+  bottom: 4px;
 }
