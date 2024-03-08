@@ -18,13 +18,13 @@ document.getElementById("signup").addEventListener("click", function () {
     return false;
   }
 
-  // var num = document.getElementById("number").value;
-  //     if (isNaN(num)){
-  //     document.getElementById("number").innerHTML="Enter Numeric value only";
-  //     return false;
-  //   }else{
-  //     return true;
-  //     }
+  var num = document.getElementById("number").value;
+  if (isNaN(num)) {
+    document.getElementById("number").innerHTML = "Enter Numeric value only";
+    return false;
+  } else {
+    return true;
+  }
 
   var email = document.getElementById("email").value;
   var atposition = email.indexOf("@");

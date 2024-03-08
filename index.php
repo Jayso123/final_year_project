@@ -6,9 +6,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ScholarZone</title>
-  <link rel="stylesheet" href="navbar.css">
-  <link rel="stylesheet" href="aws.css">
-  <link rel="stylesheet" href="Demo.css">
+  <?php
+  echo '<link rel="stylesheet" href="./navbar.css">';
+  echo '<link rel="stylesheet" href="./aws.css">';
+  echo '<link rel="stylesheet" href="./Demo.css">';
+  ?>
 </head>
 
 <body>
@@ -29,15 +31,19 @@
         </li>
       </ul>
     </nav>
-    <a href="/final/sign_in.html" id="cta">
+    <?php
+
+    ?>
+    
+     <a href="./final/signin.php" id="cta">
       <button class="headingbutton">Login</button></a>
-    <a href="/final/Signup.html" id="cta1">
+    <a href="./final/signup.php" id="cta1">
       <button class="headingbutton" id="register">Register</button></a>
-  </header>
+      </header>
   <div id="searchbox">
     <input id="home_search" type="text" placeholder="What are you looking for?" autocomplete="on">
     <i class="fa fa-search" id="searchIcon"></i>
-    <div class="searchbox2"><ul id="searchResults"></ul></div>
+    <div class="searchbox2" style="left: 500px;"><ul id="searchResults" ></ul></div>
     <!-- <button id="searchIcon">
       <i class="fa fa-search"></i>
     </button> -->

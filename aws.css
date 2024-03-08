@@ -16,7 +16,7 @@ body {
     margin: 0;
     position: absolute;
     top: calc(100% + 5px);
-    left: 475px;
+    left: 630px;
     z-index: 1;
     width: calc(80% - 20px);
     max-height: 150px;
