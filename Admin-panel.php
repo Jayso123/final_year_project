@@ -1,3 +1,31 @@
+<?php
+$showAlert = false;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    include "../php/adddb.php";
+    $title = $_POST["title"];
+    $description = $_POST["description"];
+    $eligibility = $_POST["eligibility"];
+    $deadline = $_POST["deadline"];
+
+    if ($password == $cpassword) {
+        // $stmt = $conn->prepare("INSERT INTO `details` (`username`, `number`, `email`, `password`) VALUES (?, ?, ?, ?)");
+        $stmt = $conn->prepare($sql = "INSERT INTO `data` (`Title`, `description`, `eligibility`, `deadline`) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $title, $description, $eligibility, $deadline);
+        $result = $stmt->execute();
+
+        if (!$result) {
+            // Handle the error
+            die('Invalid query: ' . $conn->error);
+        }
+        else{
+          header("Location: ../index.php");
+        }
+        $showAlert = true;
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,22 +34,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>home</title>
 
-    <!-- font awesome cdn link  -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
     />
 
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="/final/html/css/panel.css" />
+
+    <?php
+    echo '<link rel="stylesheet" href="./final/html/css/panel.css" />';
+    ?>
   </head>
   <body>
     <header class="header">
       <section class="flex">
         <!-- <a href="home.html" class="logo">Educa.</a> -->
-        <a href="index.html">
-          <img src="./LOGO.png" alt="LOGO" class="logo" />
-        </a>
+        <?php
+        echo '<img class="logo" style="max-height: 250px; max-width: 250px" />';
+          ?>
 
         <div class="icons">
           <div id="menu-btn" class="fas fa-bars"></div>
@@ -31,7 +60,7 @@
         </div>
 
         <div class="profile">
-          <img src="/final/html/Images/demo.jpg" class="image" alt="" />
+          <img src="./final/html/Images/demo.jpg" class="image" alt="" />
           <h3 class="name">Sujal Trivedi</h3>
           <p class="role">studen</p>
           <a href="profile.html" class="btn">view profile</a>
@@ -49,7 +78,7 @@
       </div>
 
       <div class="profile">
-        <img src="/final/html/Images/demo.jpg" class="image" alt="" />
+        <img src="./final/html/Images/demo.jpg" class="image" alt="" />
         <h3 class="name">Sujal Trivedi</h3>
         <p class="role">studen</p>
         <a href="profile.html" class="btn">view profile</a>
@@ -86,66 +115,40 @@
           <p class="likes">saved Scholarships : <span>4</span></p>
           <a href="#" class="inline-btn">view Scholarships</a>
         </div>
-
-        <!-- <div class="box">
-          <h3 class="title">top categories</h3>
-          <div class="flex">
-            <a href="#"><i class="fas fa-code"></i><span>Government</span></a>
-            <a href="#"
-              ><i class="fas fa-chart-simple"></i><span>NGO'S</span></a
-            >
-            <a href="#"><i class="fas fa-pen"></i><span>Institutes</span></a>
-            <a href="#"
-              ><i class="fas fa-chart-line"></i><span>marketing</span></a
-            >
-            <a href="#"><i class="fas fa-music"></i><span>music</span></a>
-            <a href="#"
-              ><i class="fas fa-camera"></i><span>photography</span></a
-            >
-            <a href="#"><i class="fas fa-cog"></i><span>software</span></a>
-            <a href="#"><i class="fas fa-vial"></i><span>science</span></a>
-          </div>
-        </div> -->
-
-        <!-- <div class="box">
-          <h3 class="title">popular topics</h3>
-          <!-- <div class="flex">
-            <a href="#"><i class="fab fa-html5"></i><span>HTML</span></a>
-            <a href="#"><i class="fab fa-css3"></i><span>CSS</span></a>
-            <a href="#"><i class="fab fa-js"></i><span>javascript</span></a>
-            <a href="#"><i class="fab fa-react"></i><span>react</span></a>
-            <a href="#"><i class="fab fa-php"></i><span>PHP</span></a>
-            <a href="#"
-              ><i class="fab fa-bootstrap"></i><span>bootstrap</span></a
-            >
-          </div> -->
-
-        <!-- <div class="box">
-          <h3 class="title">become a tutor</h3>
-          <p class="tutor">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Perspiciatis, nam?
-          </p>
-          <a href="teachers.html" class="inline-btn">get started</a>
-        </div> -->
       </div>
     </section>
 
     <section class="courses">
       <h1 class="heading">Add Scholarship</h1>
+      <div class="st">
+        <form action="Admin-panel.php" method="post" class="card-body">
+          <div class="con">
+            <label for="title">Scholarship Title:</label>
+            <input type="text" id="title" name="title" required />
 
-      <form action="Addsch.php" method="post" class="card-body">
-        <div class="con">
-          <label for="label">title</label>
-          <input type="text" name="title" id="title" />
-          <label for="label">Describtion</label>
-          <input type="text" name="desc" id="desc" />
-          <label for="label">Eligiblity</label>
-          <input type="text" name="elit" id="elit" />
-          <label for="label">Deadline</label>
-          <input type="text" name="dead" id="dead" />
-        </div>
-      </form>
+            <label for="description">Description:</label>
+            <textarea
+              id="description"
+              name="description"
+              rows="4"
+              required
+            ></textarea>
+
+            <label for="eligibility">Eligibility:</label>
+            <textarea
+              id="eligibility"
+              name="eligibility"
+              rows="4"
+              required
+            ></textarea>
+
+            <label for="deadline">Deadline:</label>
+            <input type="date" id="deadline" name="deadline" required />
+
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
     </section>
 
     <footer class="footer">
@@ -155,5 +158,6 @@
 
     <!-- custom js file link  -->
     <script src="./final/html/js/Admin.js"></script>
+    <script src="./final/html/js/form.js"></script>
   </body>
 </html>

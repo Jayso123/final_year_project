@@ -12,13 +12,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt = $conn->prepare("INSERT INTO `details` (`username`, `number`, `email`, `password`) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("ssss", $username, $number, $email, $password);
         $result = $stmt->execute();
-
+        
         if (!$result) {
             // Handle the error
             die('Invalid query: ' . $conn->error);
         }
         else{
-          header("Location: ../final/signin.php");
+            header("Location: ../final/signin.php");
         }
         $showAlert = true;
     }

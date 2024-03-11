@@ -55,7 +55,7 @@
         Scholarship</h2>
       <p class="section_description">
         Apply to Scholarship for free
-        <a class="view_all_cta" href="/List_sch.html">
+        <a class="view_all_cta" href="./List_sch.html">
           View all Scholarship <i class="ic-24-arrow-right"></i>
         </a>
       </p>

@@ -1,5 +1,5 @@
 <?php
-$login = false;
+$login = true;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include '../php/dbconn.php';
     $username = $_POST["username"];
@@ -12,10 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $result->fetch_assoc();
 
     if ($user) {
-        $login = true;
+        $login = false;
         header("Location: ../index.php");
     } else {
-        $login = false;
+        $login = true;
     }
 }
 ?>
@@ -32,9 +32,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <?php
-    if($login){ 
+    if(!$login){ 
         echo '<script>alert("Login successful")</script>';
-    } else {
+    }
+     else {
         echo '<script>alert("Invalid username or password")</script>';
     }
     ?>
