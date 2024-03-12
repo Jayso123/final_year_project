@@ -29,9 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php
         echo '<link rel="stylesheet" href="../final/html/css/sign_in.css"/>';
     ?>
-    <?php
-        echo '<link rel="icon" href="../LOGO.png">';
-    ?>
+    <link rel="icon" href="../LOGO.png"/>
 </head>
 <body>
     <?php

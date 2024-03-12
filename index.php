@@ -11,6 +11,8 @@
   echo '<link rel="stylesheet" href="./aws.css">';
   echo '<link rel="stylesheet" href="./Demo.css">';
   ?>
+    <link rel="icon" href="../LOGO.png"/>
+
 </head>
 
 <body>

@@ -34,6 +34,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php
         echo '<link rel="stylesheet" href="../final/html/css/signup-1.css"/>';
     ?>
+    <link rel="icon" href="../LOGO.png"/>
+
 </head>
 <body>
     <?php
