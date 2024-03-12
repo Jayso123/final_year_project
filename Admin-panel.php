@@ -14,7 +14,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = $stmt->execute();
 
         if (!$result) {
-            // Handle the error
             die('Invalid query: ' . $conn->error);
         }
         else{
@@ -156,7 +155,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <a href="index.html"> <span>ScholarZone</span> </a> | all rights reserved!
     </footer>
 
-    <!-- custom js file link  -->
     <script src="./final/html/js/Admin.js"></script>
     <script src="./final/html/js/form.js"></script>
   </body>
