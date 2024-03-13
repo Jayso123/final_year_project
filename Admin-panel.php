@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
     />
 
-    <link rel="icon" href="../LOGO.png"/>
+    <link rel="icon" href="./LOGO.png"/>
 
     <?php
     echo '<link rel="stylesheet" href="./final/html/css/panel.css" />';
@@ -83,20 +83,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p class="role">studen</p>
         <a href="profile.html" class="btn">view profile</a>
       </div>
-
+    <
       <nav class="navbar">
-        <a href="home.html"><i class="fas fa-home"></i><span>home</span></a>
-        <a href="about.html"
+        <a href="./Admin-panel.php"><i class="fas fa-home"></i><span>home</span></a>
+        <a href="./FAQs.html"
           ><i style="margin-left: 5px" class="fas fa-question"></i
           ><span style="margin-left: 5px">FaQ's</span></a
         >
-        <a href="scholarships.html"
+        <a href="./scholarships.html"
           ><i class="fas fa-graduation-cap"></i><span>Scholarship</span></a
         >
         <a href="mentors.html"
           ><i class="fas fa-chalkboard-user"></i><span>Mentors</span></a
         >
-        <a href="/contact_us.html"
+        <a href="./contact_us.html"
           ><i class="fas fa-headset"></i><span>contact us</span></a
         >
       </nav>

@@ -11,7 +11,7 @@
   echo '<link rel="stylesheet" href="./aws.css">';
   echo '<link rel="stylesheet" href="./Demo.css">';
   ?>
-    <link rel="icon" href="../LOGO.png"/>
+    <link rel="icon" href="./LOGO.png"/>
 
 </head>
 
@@ -22,6 +22,9 @@
     </a>
     <nav>
       <ul class="nav_links">
+        <li>
+          <a href="./DonatUs.html"> Donatus </a>
+        </li>
         <li>
           <a href="/contact_us.html">Contact Us</a>
         </li>
@@ -42,10 +45,19 @@
     <a href="./final/signup.php" id="cta1">
       <button class="headingbutton" id="register">Register</button></a>
       </header>
-  <div id="searchbox">
-    <input id="home_search" type="text" placeholder="What are you looking for?" autocomplete="on">
-    <i class="fa fa-search" id="searchIcon"></i>
-    <div class="searchbox2" style="left: 500px;"><ul id="searchResults" ></ul></div>
+      <div id="searchbox">
+  <input
+    id="home_search"
+    type="text"
+    placeholder="What are you looking for?"
+    autocomplete="on"
+  />
+  <i class="fa fa-search" id="searchIcon"></i>
+  <div class="searchbox2"><ul id="searchResults"></ul></div>
+  <a id="searchLink" href="#"></a>
+
+  
+</div>
     <!-- <button id="searchIcon">
       <i class="fa fa-search"></i>
     </button> -->
