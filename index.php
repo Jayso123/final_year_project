@@ -26,9 +26,6 @@
           <a href="./DonatUs.html"> Donatus </a>
         </li>
         <li>
-          <a href="/contact_us.html">Contact Us</a>
-        </li>
-        <li>
           <a href="./FAQs.html">FaQ's</a>
         </li>
         <li>
