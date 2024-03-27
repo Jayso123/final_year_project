@@ -1,3 +1,11 @@
+<?php
+// Include database connection
+include './php/admin_db.php';
+
+// Fetch scholarships from database
+$sql = "SELECT * FROM scholarships";
+$result = mysqli_query($conn, $sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +18,9 @@
   echo '<link rel="stylesheet" href="./navbar.css">';
   echo '<link rel="stylesheet" href="./aws.css">';
   echo '<link rel="stylesheet" href="./Demo.css">';
+
   ?>
-    <link rel="icon" href="./LOGO.png"/>
+  <link rel="icon" href="./LOGO.png" />
 
 </head>
 
@@ -26,9 +35,6 @@
           <a href="./DonatUs.html"> Donatus </a>
         </li>
         <li>
-          <a href="/contact_us.html">Contact Us</a>
-        </li>
-        <li>
           <a href="./FAQs.html">FaQ's</a>
         </li>
         <li>
@@ -36,29 +42,24 @@
         </li>
       </ul>
     </nav>
-    <?php
 
-    ?>
-    
-     <a href="./final/signin.php" id="cta">
-      <button class="headingbutton">Login</button></a>
-    <a href="./final/signup.php" id="cta1">
-      <button class="headingbutton" id="register">Register</button></a>
-      </header>
-      <div id="searchbox">
-  <input
-    id="home_search"
-    type="text"
-    placeholder="What are you looking for?"
-    autocomplete="on"
-  />
-  <i class="fa fa-search" id="searchIcon"></i>
-  <div class="searchbox2"><ul id="searchResults"></ul></div>
-  <a id="searchLink" href="#"></a>
 
-  
-</div>
-    <!-- <button id="searchIcon">
+    <a href="./final/signin.php" id="cta">
+      <button class="headingbutton">LogOut</button></a>
+    <!-- <a href="./final/signup.php" id="cta1">
+      <button class="headingbutton" id="register">Register</button></a> -->
+  </header>
+  <div id="searchbox">
+    <input id="home_search" type="text" placeholder="What are you looking for?" autocomplete="on" />
+    <i class="fa fa-search" id="searchIcon"></i>
+    <div class="searchbox2">
+      <ul id="searchResults"></ul>
+    </div>
+    <a id="searchLink" href="#"></a>
+
+
+  </div>
+  <!-- <button id="searchIcon">
       <i class="fa fa-search"></i>
     </button> -->
 
@@ -69,37 +70,36 @@
         Scholarship</h2>
       <p class="section_description">
         Apply to Scholarship for free
-        <a class="view_all_cta" href="./List_sch.html">
+        <a class="view_all_cta" href="./List_sch.php">
           View all Scholarship <i class="ic-24-arrow-right"></i>
         </a>
       </p>
+<?php
+$i = 1;
+  while ($row = mysqli_fetch_assoc($result)) {
+    if ($i > 3) {
+        break;
+    }
 
-      
-    <div class="box">
-      <div class="box1">
-        <h1 class="details"> K.C.MAHINDRA EDUCATION TRUST</h1>
-        <h2 class="scholar"> MAHINDRA ALL INDIA TALENT SCHOLARSHIPS FOR DIPLOMA COURSES IN POLYTECHNIC.
-          Preference will be given to girl students, children from lower income group families, disabled children
-           and children of armed forces personnel.</h2>
-        <a class="more" href="Sch_Details.html">Read more &#8594;</a>
-      </div>
-    </div>
-    <div class="box">
-      <div class="box1">
-        <h1 class="details">Fair & Lovely Foundation - Women Scholarship</h1>
-        <h2 class="scholar"> For Women across the country the new academic year brings new opportunities.
-           The Fair & lovely foundation has a vision to give an opportunity to as many as women they can to realize their dreams.</h2>
-        <a class="more" href="Sch_Details.html">Read more &#8594;</a>
-      </div>
-      </div>
-      <div class="box">
-      <div class="box1">
-        <h1 class="details">INLAKS RESEARCH TRAVEL GRANTS</h1>
-        <h2 class="scholar"> The Inlaks Shivdasani Foundation has been supporting innovative work in research and scholarship for more than three decades.
-           "Inlaks Research Travel Grant" offers financial support for a maximum of 3 months at a university/institution/library abroad.</h2>
-        <a class="more" href="Sch_Details.html">Read more &#8594;</a>
-      </div>
-    </div>
-<script src="./search.js"></script>
+    $boxClass = 'box' . $i;
+    $boxInnerClass = 'box' . $i . '-inner';
+
+echo "<div class='$boxClass'>";
+echo   "<div class='box'>";
+echo    "<div class='box1'>";
+// echo       "<h1 class='details'> "<strong>Title:</strong> " . $row['title'];</h1>";
+echo "<h1 class='details'>Title: " . $row['title'];
+echo          "<h2 class='scholar'><strong>Description:</strong> " . $row['description'];
+echo          "<a class='more' href='Sch_Details.html'>Read more &#8594;</a>";
+echo        "</div>";
+echo        "</div>";
+
+$i++;
+
+
+  }
+?>
+
+
 </body>
 </html>

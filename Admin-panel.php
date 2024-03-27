@@ -1,29 +1,32 @@
 <?php
-$showAlert = false;
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include "../php/adddb.php";
-    $title = $_POST["title"];
-    $description = $_POST["description"];
-    $eligibility = $_POST["eligibility"];
-    $deadline = $_POST["deadline"];
 
-    if ($password == $cpassword) {
-        // $stmt = $conn->prepare("INSERT INTO `details` (`username`, `number`, `email`, `password`) VALUES (?, ?, ?, ?)");
-        $stmt = $conn->prepare($sql = "INSERT INTO `data` (`Title`, `description`, `eligibility`, `deadline`) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $title, $description, $eligibility, $deadline);
-        $result = $stmt->execute();
+include './php/admin_db.php';
 
-        if (!$result) {
-            die('Invalid query: ' . $conn->error);
-        }
-        else{
-          header("Location: ../index.php");
-        }
-        $showAlert = true;
+if (isset($_POST['add-btn'])) {
+    // Data to be inserted
+    $title = $_POST['title'];
+    $description = $_POST['description'];
+    $eligibility = $_POST['eligibility'];
+    $deadline = $_POST['deadline']; // Assuming deadline is in YYYY-MM-DD format
+
+    // SQL query to insert data into the table
+    $sql = "INSERT INTO scholarships (title, description, eligibility, deadline) VALUES ('$title', '$description', '$eligibility', '$deadline')";
+
+    // Execute the SQL query
+    if (mysqli_query($conn, $sql) == true) {
+      echo '<script>alert("Data inserted successfully.")</script>';
+        
+        // header("Location: index.php");
+        // exit();
+
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 }
-?>
 
+// Close the database connection
+mysqli_close($conn);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -121,7 +124,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <section class="courses">
       <h1 class="heading">Add Scholarship</h1>
       <div class="st">
-        <form action="Admin-panel.php" method="post" class="card-body">
+        <form action="./Admin-panel.php" method="post" class="card-body">
           <div class="con">
             <label for="title">Scholarship Title:</label>
             <input type="text" id="title" name="title" required />
@@ -145,7 +148,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label for="deadline">Deadline:</label>
             <input type="date" id="deadline" name="deadline" required />
 
-            <button type="submit">Submit</button>
+            <button type="submit" name="add-btn">Submit</button>
           </div>
         </form>
       </div>

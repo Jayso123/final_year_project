@@ -58,6 +58,23 @@
       .card p {
         font-size: 1rem;
       }
+
+      .app {
+        float: right;
+        height: 30px;
+        width: 70px;
+        background-color: #63d49e;
+        color: white;
+        margin-right: 30px;
+        border-radius: 5px;
+        font-size: 15px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .app:hover {
+        background-color: aquamarine;
+      }
     </style>
   </head>
   <body>
@@ -65,17 +82,7 @@
       <a class="logo" href="#">
         <img class="logo" src="./LOGO.png" alt="Scholarzone" />
       </a>
-      <div id="searchbox">
-        <input
-          id="home_search"
-          type="text"
-          placeholder="Search for your scholarship"
-          autocomplete="off"
-        />
-        <button id="searchIcon">
-          <i class="fa fa-search"></i>
-        </button>
-      </div>
+
       <nav>
         <ul class="nav_links">
           <li>
@@ -83,16 +90,12 @@
           </li>
           <li></li>
           <li>
-            <a href="#">Scholarship</a>
+            <a href="./List_sch.php">Scholarship</a>
           </li>
         </ul>
       </nav>
       <a href="/final/index.html" id="cta">
-        <button class="headingbutton">Login</button></a
-      >
-
-      <a href="/" id="cta1">
-        <button class="headingbutton" id="register">Register</button></a
+        <button class="headingbutton">Logout</button></a
       >
     </header>
     <div class="card">
@@ -124,6 +127,7 @@
       <!-- <br/> -->
       <br />
       <a class="link" href="./index.php">&#8592; Back to Scholarships</a>
+      <button type="submit" class="app">Apply</button>
     </div>
   </body>
 </html>
