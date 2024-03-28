@@ -160,6 +160,5 @@ mysqli_close($conn);
     </footer>
 
     <script src="./final/html/js/Admin.js"></script>
-    <script src="./final/html/js/form.js"></script>
   </body>
 </html>
